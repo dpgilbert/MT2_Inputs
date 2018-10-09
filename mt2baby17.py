@@ -115,10 +115,10 @@ if __name__ == "__main__":
     done = False    
     while not done:
         summary_info = {}
+        done = True # Assume all tasks are complete until we see otherwise
         for dsname,shortname in sample_map.items():
             task = tasks[dsname]
             merge_task = merge_tasks[dsname]
-            done = True # Assume all tasks are complete until we see otherwise
             # Straightforward logic
             if not task.complete():
                 task.process()
